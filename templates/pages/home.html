@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Yeison Araya — Arquitecto de Software Operativo{% endblock %}
+{% block title %}Yeison Araya - Arquitectura de Software Operativo{% endblock %}
 
 {% block content %}
 
@@ -10,17 +10,17 @@
   <div class="hero__bg-grid"></div>
   <div class="hero__container">
     <div class="hero__content">
-      <p class="hero__pre-title" id="heroPreTitle">Líder de TI · Desarrollo Empresarial</p>
+      <p class="hero__pre-title" id="heroPreTitle">Arquitectura de software · Operaciones críticas</p>
       <h1 class="hero__title" id="heroTitle">
         Yeison<br/><span class="hero__title-gold">Araya</span>
       </h1>
       <p class="hero__subtitle" id="heroSubtitle">
-        Arquitecto de software operativo para empresas que necesitan<br class="hide-mobile"/>
-        dejar de depender de Excel.
+        Construyo plataformas empresariales modulares para operaciones<br class="hide-mobile"/>
+        que no pueden depender de Excel, papel o WhatsApp.
       </p>
       <p class="hero__desc" id="heroDesc">
-        Creo plataformas web a medida para automatizar procesos reales:
-        asistencia, planilla, rondas, vehículos, bodegas, reportes, APIs e integraciones empresariales.
+        Desarrollo sistemas Django, APIs e integraciones para asistencia, rondas, monitoreo,
+        reportes, finanzas, condominios, fincas, bodegas, videovigilancia y procesos empresariales reales.
       </p>
       <div class="hero__actions" id="heroActions">
         <a href="{% url 'projects:list' %}" class="btn btn--gold btn--lg">Ver proyectos</a>
@@ -36,13 +36,14 @@
         <pre class="hero__code"><code><span class="c-kw">class</span> <span class="c-fn">YeisonAraya</span>:
     role = <span class="c-str">"Software Architect"</span>
     years = <span class="c-num">7</span>
-    focus = <span class="c-str">"Enterprise Operations"</span>
+    focus = <span class="c-str">"Critical Operations"</span>
 
     <span class="c-kw">def</span> <span class="c-fn">solve</span>(self, problem):
         <span class="c-kw">return</span> Platform(
             real_data=<span class="c-kw">True</span>,
             users_in_prod=<span class="c-kw">True</span>,
-            replaces_excel=<span class="c-kw">True</span>
+            replaces_excel=<span class="c-kw">True</span>,
+            audit_ready=<span class="c-kw">True</span>
         )</code></pre>
       </div>
     </div>
@@ -58,8 +59,8 @@
 <section class="quote-section">
   <div class="section-container">
     <blockquote class="quote" data-gsap="fade-up">
-      "Donde una empresa ve desorden operativo,<br/>
-      <strong>yo veo una plataforma por construir.</strong>"
+      "Donde una empresa ve procesos dispersos,<br/>
+      <strong>yo veo una arquitectura operativa por ordenar.</strong>"
     </blockquote>
   </div>
 </section>
@@ -141,7 +142,7 @@
   <div class="section-container">
     <div class="section-header" data-gsap="fade-up">
       <span class="section-label">Portafolio</span>
-      <h2 class="section-title">Proyectos</h2>
+      <h2 class="section-title">SCT APP y proyectos empresariales</h2>
     </div>
   </div>
 
@@ -214,48 +215,48 @@
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">01</span>
             <div>
-              <h3>Observo el problema real</h3>
-              <p>Entiendo la operación antes de escribir una línea de código.</p>
+              <h3>Entiendo la operación real</h3>
+              <p>Primero observo usuarios, datos, excepciones, permisos y puntos de falla.</p>
             </div>
           </li>
         {% elif forloop.counter == 2 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">02</span>
             <div>
-              <h3>Entiendo la operación</h3>
-              <p>Mapeo flujos, datos, usuarios y puntos de falla actuales.</p>
+              <h3>Identifico la fuente de verdad</h3>
+              <p>Defino qué dato manda: turno, solicitud, registro, mutuo, alerta, factura o inventario.</p>
             </div>
           </li>
         {% elif forloop.counter == 3 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">03</span>
             <div>
-              <h3>Diseño la solución práctica</h3>
-              <p>Arquitectura simple, escalable y enfocada en el negocio.</p>
+              <h3>Diseño una arquitectura práctica</h3>
+              <p>Modelo la solución con módulos claros, trazabilidad, permisos y reportes útiles.</p>
             </div>
           </li>
         {% elif forloop.counter == 4 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">04</span>
             <div>
-              <h3>Programo la plataforma</h3>
-              <p>Django, REST Framework, autenticación, permisos y datos reales.</p>
+              <h3>Programo sobre datos reales</h3>
+              <p>Django, REST Framework, PostgreSQL, cache, APIs y tareas según el caso.</p>
             </div>
           </li>
         {% elif forloop.counter == 5 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">05</span>
             <div>
-              <h3>Integro datos y procesos</h3>
-              <p>APIs, QR, mapas, webhooks, notificaciones y reportes.</p>
+              <h3>Integro operación e infraestructura</h3>
+              <p>QR, GPS, WebSockets, NVR, VPS, CRM, formularios, dashboards y reportes.</p>
             </div>
           </li>
         {% elif forloop.counter == 6 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">06</span>
             <div>
-              <h3>Pruebo con usuarios reales</h3>
-              <p>El sistema no sale al aire hasta que la operación lo valida.</p>
+              <h3>Valido con escenarios reales</h3>
+              <p>Pruebo casos normales, excepciones, datos históricos y flujo administrativo.</p>
             </div>
           </li>
         {% elif forloop.counter == 7 %}
@@ -263,15 +264,15 @@
             <span class="process-step__num">07</span>
             <div>
               <h3>Pongo en producción</h3>
-              <p>Railway, VPS o el servidor del cliente. Siempre con respaldo.</p>
+              <p>Railway, VPS, Docker o servidor del cliente con configuración controlada.</p>
             </div>
           </li>
         {% elif forloop.counter == 8 %}
           <li class="process-step" data-gsap="fade-up">
             <span class="process-step__num">08</span>
             <div>
-              <h3>Mejoro según la operación</h3>
-              <p>Los sistemas que construyo crecen con la empresa.</p>
+              <h3>Mejoro con la operación encima</h3>
+              <p>Los sistemas crecen por módulos sin perder trazabilidad ni estabilidad.</p>
             </div>
           </li>
         {% endif %}
@@ -326,12 +327,12 @@
   <div class="section-container">
     <div class="cta-box" data-gsap="fade-up">
       <h2 class="cta-box__title">
-        ¿Tu empresa todavía depende de Excel<br/>
-        para controlar operaciones críticas?
+        ¿Tu empresa todavía controla operaciones críticas<br/>
+        con hojas, mensajes y revisiones manuales?
       </h2>
       <p class="cta-box__desc">
-        Hablemos. Te muestro cómo una plataforma web a medida puede
-        cambiar la forma en que tu equipo trabaja.
+        Hablemos. Puedo ayudarte a convertir procesos dispersos en una plataforma
+        clara, trazable y preparada para crecer.
       </p>
       <a href="{% url 'contact:contact' %}" class="btn btn--gold btn--lg">
         Iniciar conversación →

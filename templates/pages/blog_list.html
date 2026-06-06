@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Blog — Yeison Araya{% endblock %}
+{% block title %}Blog - Yeison Araya{% endblock %}
 
 {% block content %}
 <section class="page-hero">
   <div class="section-container">
     <span class="section-label">Conocimiento técnico</span>
     <h1 class="page-title">Blog</h1>
-    <p class="page-subtitle">Django, automatización, integraciones y sistemas empresariales.</p>
+    <p class="page-subtitle">
+      Arquitectura Django, operaciones críticas, integraciones, seguridad y sistemas empresariales reales.
+    </p>
   </div>
 </section>
 
@@ -32,7 +34,7 @@
         </div>
       </article>
     {% empty %}
-      <p class="empty-state">Posts próximamente.</p>
+      <p class="empty-state">Posts técnicos en preparación.</p>
     {% endfor %}
   </div>
 </section>

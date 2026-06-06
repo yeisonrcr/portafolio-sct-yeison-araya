@@ -52,40 +52,60 @@
   {
     "model": "projects.technology",
     "pk": 11,
-    "fields": { "name": "Flutter", "slug": "flutter", "icon_class": "devicon-flutter-plain", "color": "#D4AF37", "order": 11 }
+    "fields": { "name": "Redis", "slug": "redis", "icon_class": "devicon-redis-plain", "color": "#D4AF37", "order": 11 }
   },
   {
     "model": "projects.technology",
     "pk": 12,
-    "fields": { "name": "Go", "slug": "go", "icon_class": "devicon-go-plain", "color": "#D4AF37", "order": 12 }
+    "fields": { "name": "Django Channels", "slug": "django-channels", "icon_class": "", "color": "#D4AF37", "order": 12 }
   },
   {
     "model": "projects.technology",
     "pk": 13,
-    "fields": { "name": "Bitrix24 API", "slug": "bitrix24", "icon_class": "", "color": "#D4AF37", "order": 13 }
+    "fields": { "name": "Celery", "slug": "celery", "icon_class": "", "color": "#D4AF37", "order": 13 }
   },
   {
     "model": "projects.technology",
     "pk": 14,
-    "fields": { "name": "Clockify API", "slug": "clockify", "icon_class": "", "color": "#D4AF37", "order": 14 }
+    "fields": { "name": "QR / GPS", "slug": "qr-gps", "icon_class": "", "color": "#D4AF37", "order": 14 }
   },
   {
     "model": "projects.technology",
     "pk": 15,
-    "fields": { "name": "QR Codes", "slug": "qr-codes", "icon_class": "", "color": "#D4AF37", "order": 15 }
+    "fields": { "name": "Linux VPS", "slug": "linux-vps", "icon_class": "devicon-linux-plain", "color": "#D4AF37", "order": 15 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 16,
+    "fields": { "name": "NVR / Dahua", "slug": "nvr-dahua", "icon_class": "", "color": "#D4AF37", "order": 16 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 17,
+    "fields": { "name": "Bitrix24 API", "slug": "bitrix24", "icon_class": "", "color": "#D4AF37", "order": 17 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 18,
+    "fields": { "name": "Clockify API", "slug": "clockify", "icon_class": "", "color": "#D4AF37", "order": 18 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 19,
+    "fields": { "name": "Flutter", "slug": "flutter", "icon_class": "devicon-flutter-plain", "color": "#D4AF37", "order": 19 }
   },
   {
     "model": "projects.project",
     "pk": 1,
     "fields": {
-      "title": "SCT APP — Plataforma Operativa Empresarial",
+      "title": "SCT APP - Plataforma Modular de Operaciones Criticas",
       "slug": "sct-app",
-      "subtitle": "Sistema completo para seguridad privada: asistencia, rondas, vehículos, planilla y reportes.",
-      "description": "SCT APP es una plataforma web empresarial construida con Django para digitalizar y automatizar las operaciones de una empresa de seguridad privada con más de 100 usuarios activos.\n\nAntes de SCT APP, los procesos de asistencia, control de rondas, bitácoras, vehículos y planilla operativa se manejaban en hojas de Excel, registros en papel y comunicaciones por WhatsApp. Eso generaba errores, pérdida de información crítica y horas de trabajo manual.\n\nSCT APP reemplaza todos esos controles con un sistema centralizado, accesible desde cualquier dispositivo con conexión a internet. Los supervisores registran rondas con QR y mapas. Los operativos marcan asistencia digital. Los administradores generan reportes en tiempo real. La planilla se calcula automáticamente.\n\nEl sistema está en producción, funciona de lunes a domingo con múltiples usuarios simultáneos y tiene un costo de infraestructura mínimo gracias a su arquitectura eficiente sobre Railway.",
-      "short_description": "Plataforma Django en producción para +100 usuarios. Automatiza asistencia, rondas, vehículos, bitácoras y planilla operativa. Reemplaza Excel y controles manuales.",
+      "subtitle": "Suite empresarial para seguridad privada: asistencia, rondas, bitacoras, monitoreo, reportes, mutuos, X61 y control operativo.",
+      "description": "SCT APP es una plataforma empresarial modular construida con Django para controlar operaciones criticas de seguridad privada en produccion.\n\nLa plataforma centraliza asistencia, turnos recurrentes, extras, vacacionales, mutuos acuerdos, solicitudes aprobadas por monitoreo, rondas QR/GPS, bitacoras, X61, reportes administrativos, dashboard operativo y trazabilidad de cambios. No es un conjunto de proyectos aislados: es una suite viva donde cada modulo conversa con los demas y respeta los datos historicos.\n\nEl problema original era operativo: hojas de Excel, mensajes por WhatsApp, cuadernos fisicos, aprobaciones dispersas, reportes que dependian de revision manual y datos sensibles sin una fuente unica. La solucion fue una arquitectura web con modelos claros, permisos, auditoria, cache controlado, WebSockets, tareas periodicas y reglas defensivas para no romper asistencias, fotos, bitacoras ni turnos reales.\n\nEntre los casos resueltos estan la separacion entre oficial fisico y oficial registro en mutuos acuerdos, sincronizacion automatica de rondas por turno activo, justificaciones vinculadas a entradas reales, gestion manual de puestos sin cerrar turnos indebidamente y reportes web/PDF coherentes con la operacion.",
+      "short_description": "Plataforma modular Django en produccion para operaciones criticas: asistencia, rondas QR/GPS, monitoreo, bitacoras, mutuos, reportes y control historico.",
       "is_featured": true,
       "cover_image": "",
-      "technologies": [1, 2, 3, 4, 5, 9, 10, 15],
+      "technologies": [1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14],
       "users_count": 100,
       "duration_months": 24,
       "url_live": "",
@@ -93,224 +113,334 @@
       "status": "active",
       "carousel_order": 0,
       "created_at": "2024-01-01T00:00:00Z",
-      "updated_at": "2024-01-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 2,
     "fields": {
-      "title": "Sistema de Control Vehicular Empresarial",
-      "slug": "control-vehicular",
-      "subtitle": "Control de entradas, salidas, kilometraje y mantenimiento de flota.",
-      "description": "Sistema web para gestionar la flota vehicular de una empresa operativa. Registra entradas, salidas, conductores asignados, kilometraje, combustible y mantenimientos preventivos. Los administradores visualizan el estado de cada vehículo en tiempo real y reciben alertas automáticas cuando un vehículo requiere servicio.",
-      "short_description": "Control de flota vehicular con registros de entradas, salidas, combustible y mantenimiento. Alertas automáticas.",
+      "title": "SCT APP - Asistencia, Turnos y Gestion Manual",
+      "slug": "sct-asistencias-turnos",
+      "subtitle": "Modulo para entradas, salidas, turnos reales, recurrentes, extras, vacacionales, solicitudes y justificaciones.",
+      "description": "Modulo interno de SCT APP enfocado en el control seguro de asistencia operativa.\n\nEl sistema distingue entre programacion y realidad: un reporte puede venir de un turno recurrente, extra, vacacional, operacional, mutuo acuerdo, solicitud aprobada o justificacion administrativa. Esa complejidad se resolvio con una logica central que valida oficial, fecha, puesto, horario, entrada, salida y origen de la fila antes de decidir el estado visual.\n\nSe incorporaron reglas para no borrar historicos, no duplicar marcas, no mover fotos sin validacion y no cerrar turnos activos cuando solo se corrige el puesto. La gestion manual permite corregir datos puntuales con trazabilidad, bitacora correctiva y refresco controlado de cache.\n\nUn caso real anonimo fue una justificacion de entrada que se pegaba a una extra del mismo dia y puesto. La solucion fue vincular la justificacion a la entrada real y hacer que el reporte solo la aplique a la fila cuya marca coincida.",
+      "short_description": "Modulo de SCT APP para asistencia segura: turnos, extras, solicitudes, justificaciones, gestion manual, reportes y auditoria historica.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 4, 5],
-      "users_count": 30,
-      "duration_months": 6,
+      "technologies": [1, 2, 4, 5, 11],
+      "users_count": 100,
+      "duration_months": 18,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 1,
       "created_at": "2024-02-01T00:00:00Z",
-      "updated_at": "2024-02-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 3,
     "fields": {
-      "title": "Sistema de Rondas con QR y Mapas",
-      "slug": "rondas-qr",
-      "subtitle": "Control de rondas de seguridad con códigos QR, geolocalización y reportes.",
-      "description": "Plataforma para verificar que los oficiales de seguridad realizan sus recorridos correctamente. Cada punto de control tiene un código QR único. Al escanear, el sistema registra hora, usuario y ubicación GPS. Los supervisores ven el avance de las rondas en tiempo real y generan reportes de cumplimiento por turno.",
-      "short_description": "Verificación de rondas con QR y GPS. Control de cumplimiento en tiempo real para supervisores.",
+      "title": "SCT APP - Rondas QR/GPS y Monitoreo en Vivo",
+      "slug": "sct-rondas-qr-gps",
+      "subtitle": "Rondas por puesto y oficial con QR, GPS, deadlines, bloqueo, WebSockets, cache y cron.",
+      "description": "Modulo interno de SCT APP para controlar rondas de seguridad en tiempo real.\n\nCada puesto puede tener configuraciones de ronda por horario, intervalo y marcas QR. El oficial ejecuta la ronda desde el celular, el sistema valida GPS, orden de marcas, tiempos, incumplimientos y estado del turno activo. Monitoreo puede ver cards operativas, adelantar rondas, omitir marcas, justificar no realizadas y enviar recargas al dispositivo.\n\nLa mejora mas importante fue centralizar la sincronizacion de rondas. Antes algunas rondas aparecian solo despues de editar una configuracion. Se corrigio haciendo que entrada, perfil, polling y cron usen la misma fuente: turno activo + configuracion vigente + sincronizador central.\n\nEn mutuos acuerdos se resolvio una regla critica: el oficial fisico usa el celular, pero el oficial registro es el dueno del turno, EstadoRondaOficial, Ronda, IncumplimientoRonda y deadline. Ambos pueden recibir WebSocket, pero el estado operativo no se contamina.",
+      "short_description": "Rondas QR/GPS dentro de SCT APP con deadlines por turno activo, WebSockets, cache, cron y reglas seguras para mutuos acuerdos.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 4, 5, 15],
-      "users_count": 50,
-      "duration_months": 4,
+      "technologies": [1, 2, 4, 5, 11, 12, 13, 14],
+      "users_count": 80,
+      "duration_months": 12,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 2,
       "created_at": "2024-03-01T00:00:00Z",
-      "updated_at": "2024-03-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 4,
     "fields": {
-      "title": "Plataforma de Bitácoras Digitales",
-      "slug": "bitacoras-digitales",
-      "subtitle": "Reemplazo de cuadernos físicos por un sistema digital de registros operativos.",
-      "description": "Sistema para reemplazar los cuadernos de bitácora físicos que usaban los oficiales de seguridad en sus puestos. Los operativos registran novedades, incidentes, visitantes y reportes directamente desde cualquier dispositivo. Los supervisores consultan el historial completo por puesto, turno o fecha. Se eliminaron los reportes en papel y el tiempo de transcripción manual.",
-      "short_description": "Reemplazo digital de cuadernos de bitácora. Registro de novedades, incidentes y visitantes desde cualquier dispositivo.",
+      "title": "SCT APP - Bitacoras Digitales y Trazabilidad",
+      "slug": "sct-bitacoras-digitales",
+      "subtitle": "Registro operativo de novedades, incidentes, correcciones y auditoria por oficial, puesto y turno.",
+      "description": "Modulo interno de SCT APP para reemplazar cuadernos fisicos y notas dispersas por bitacoras digitales trazables.\n\nLos oficiales registran novedades desde el puesto, los supervisores consultan historial por fecha, puesto, turno y oficial, y las correcciones administrativas dejan evidencia nueva en lugar de alterar historicos sensibles.\n\nLa bitacora se usa como capa de auditoria para cambios de asistencia, justificaciones, gestion manual, incidencias, rondas y eventos operativos. Esto permite explicar que se corrigio, por que se hizo, que datos quedaron intactos y quien autorizo el ajuste.",
+      "short_description": "Bitacoras digitales de SCT APP para novedades, incidentes y auditoria de correcciones sin borrar historicos.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 4, 5],
+      "technologies": [1, 2, 4, 5],
       "users_count": 60,
-      "duration_months": 3,
+      "duration_months": 10,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 3,
       "created_at": "2024-04-01T00:00:00Z",
-      "updated_at": "2024-04-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 5,
     "fields": {
-      "title": "Sistema de Control de Planilla Operativa",
-      "slug": "planilla-operativa",
-      "subtitle": "Automatización del cálculo de horas, turnos, extras y deducciones.",
-      "description": "Módulo de planilla integrado a SCT APP que calcula automáticamente las horas trabajadas, horas extras, deducciones y liquidaciones de cada colaborador. El sistema toma los registros de asistencia y los convierte en un resumen de planilla exportable. Reemplazó el proceso manual en Excel que tomaba días en completarse.",
-      "short_description": "Cálculo automático de planilla desde registros de asistencia. Exportable a Excel. Reemplaza proceso manual de días.",
+      "title": "SCT APP - Reportes Web/PDF y Planilla Operativa",
+      "slug": "sct-reportes-planilla",
+      "subtitle": "Reportes de asistencia, estados, horas, extras, ausencias, justificaciones y exportacion administrativa.",
+      "description": "Modulo interno de SCT APP para convertir asistencia operativa en reportes confiables.\n\nEl reporte web y el PDF comparten la misma interpretacion de turnos, entradas, salidas, extras, vacacionales, mutuos y justificaciones. La logica evita que una fila de un puesto herede datos de otro, que una extra se marque como mutuo por error o que una justificacion amplia contamine varias filas del mismo dia.\n\nEl objetivo no es solo mostrar tablas: es producir informacion administrativa util para planilla, supervision y toma de decisiones. El sistema permite revisar estados, filtrar, exportar, explicar ausencias, detectar inconsistencias y refrescar cache sin borrar datos historicos.",
+      "short_description": "Reportes web/PDF de SCT APP para asistencia, extras, ausencias, justificaciones y datos utiles para planilla operativa.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 4, 5],
-      "users_count": 10,
-      "duration_months": 4,
+      "technologies": [1, 2, 3, 4, 5, 11],
+      "users_count": 30,
+      "duration_months": 14,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 4,
       "created_at": "2024-05-01T00:00:00Z",
-      "updated_at": "2024-05-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 6,
     "fields": {
-      "title": "Portal para Condominios y Entradas Rápidas",
-      "slug": "portal-condominios",
-      "subtitle": "Control de acceso para condominios con registro de visitantes y vehículos.",
-      "description": "Plataforma web para gestionar el acceso a condominios residenciales. Los guardas registran visitantes, vehículos y entregas desde una tablet en la entrada. Los residentes reciben notificaciones de visitas. Los administradores del condominio consultan el historial de accesos y generan reportes de seguridad.",
-      "short_description": "Control de acceso para condominios. Registro digital de visitantes, vehículos y entregas con notificaciones.",
+      "title": "SCT APP - Control Vehicular y Operaciones de Campo",
+      "slug": "sct-control-vehicular",
+      "subtitle": "Modulo para control de vehiculos, movimientos, asignaciones, kilometraje, combustible y mantenimiento.",
+      "description": "Modulo interno de SCT APP para controlar recursos de campo asociados a la operacion.\n\nEl sistema registra movimientos de vehiculos, responsables, kilometraje, combustible, mantenimientos preventivos y observaciones operativas. La informacion se integra con puestos, supervisores y reportes para que administracion pueda ver disponibilidad, historial y alertas sin depender de hojas aisladas.\n\nEste modulo sigue el mismo principio de la plataforma: datos centralizados, trazabilidad, permisos y reportes utiles para operacion real.",
+      "short_description": "Control vehicular integrado a SCT APP: movimientos, responsables, kilometraje, combustible, mantenimiento y reportes.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 4, 5, 15],
-      "users_count": 20,
-      "duration_months": 5,
+      "technologies": [1, 2, 4, 5],
+      "users_count": 30,
+      "duration_months": 6,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 5,
       "created_at": "2024-06-01T00:00:00Z",
-      "updated_at": "2024-06-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 7,
     "fields": {
-      "title": "Integración WordPress con Bitrix24",
-      "slug": "wordpress-bitrix24",
-      "subtitle": "Sincronización automática de leads y clientes entre WordPress y Bitrix24 CRM.",
-      "description": "Integración personalizada que captura formularios de contacto y cotizaciones desde un sitio WordPress y los envía automáticamente al CRM Bitrix24. El sistema sincroniza contactos, crea deals en el pipeline correcto y notifica al equipo de ventas. Eliminó la transcripción manual de leads y redujo el tiempo de respuesta a prospectos.",
-      "short_description": "Sincronización automática WordPress → Bitrix24. Leads y formularios directo al CRM sin intervención manual.",
+      "title": "Videovigilancia Empresarial con NVR, VPS y Dahua",
+      "slug": "videovigilancia-nvr-vps-dahua",
+      "subtitle": "Proyecto independiente para empresas grandes: camaras IP, NVR, alertas, servidor VPS y monitoreo remoto.",
+      "description": "Proyecto independiente para disenar e implementar infraestructura de videovigilancia en empresas con alta necesidad de control.\n\nLa solucion contempla camaras IP, NVR, segmentacion de red, almacenamiento local, acceso remoto por DMSS/Dahua, servidor VPS para servicios complementarios, panel web Django para registrar alertas, incidencias, ubicaciones, responsables y eventos relevantes.\n\nEl objetivo es unir infraestructura fisica con software operativo: las camaras graban en el NVR, el personal revisa desde DMSS y el sistema web conserva trazabilidad de alertas, tickets, mantenimientos, evidencias y acciones tomadas por monitoreo.",
+      "short_description": "Sistema independiente de videovigilancia empresarial con NVR, Dahua/DMSS, VPS, Django, alertas, monitoreo y trazabilidad.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [8, 7, 13],
-      "users_count": 5,
-      "duration_months": 2,
+      "technologies": [1, 2, 4, 5, 15, 16],
+      "users_count": 25,
+      "duration_months": 5,
       "url_live": "",
       "url_repo": "",
-      "status": "active",
+      "status": "development",
       "carousel_order": 6,
       "created_at": "2024-07-01T00:00:00Z",
-      "updated_at": "2024-07-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 8,
     "fields": {
-      "title": "Integración WordPress con Clockify",
-      "slug": "wordpress-clockify",
-      "subtitle": "Control de horas de proyectos desde WordPress sincronizado con Clockify.",
-      "description": "Plugin personalizado de WordPress que conecta los proyectos del sitio con la API de Clockify para registrar y consultar horas trabajadas. Los clientes ven desde su área privada cuántas horas se han invertido en su proyecto. Los administradores sincronizan reportes de tiempo directamente desde el panel de WordPress.",
-      "short_description": "Plugin WordPress que conecta proyectos con Clockify API. Reportes de horas visibles para clientes.",
+      "title": "Portal para Condominios y Control de Acceso",
+      "slug": "portal-condominios-control-acceso",
+      "subtitle": "Sistema web para visitantes, residentes, proveedores, vehiculos, autorizaciones y reportes de seguridad.",
+      "description": "Proyecto independiente para condominios y residenciales que necesitan ordenar el ingreso de personas y vehiculos.\n\nEl portal permite registrar visitantes, residentes, proveedores, placas, autorizaciones temporales, bitacoras de entrada, incidencias y reportes administrativos. Los guardas trabajan desde una tablet o computadora, mientras administracion consulta historial por fecha, casa, visitante o vehiculo.\n\nEl valor principal es reducir llamadas, papel y registros incompletos en caseta, dejando evidencia digital de quien ingreso, a que hora, por que motivo y quien autorizo.",
+      "short_description": "Portal para condominios con control de acceso, visitantes, vehiculos, autorizaciones, bitacora y reportes administrativos.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [8, 7, 14],
-      "users_count": 3,
-      "duration_months": 2,
+      "technologies": [1, 2, 3, 4, 5, 14],
+      "users_count": 20,
+      "duration_months": 5,
       "url_live": "",
       "url_repo": "",
       "status": "active",
       "carousel_order": 7,
       "created_at": "2024-08-01T00:00:00Z",
-      "updated_at": "2024-08-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 9,
     "fields": {
-      "title": "Plataforma Laravel conectada con Bitrix24",
-      "slug": "laravel-bitrix24",
-      "subtitle": "Sistema empresarial Laravel con integración completa al ecosistema Bitrix24.",
-      "description": "Plataforma web construida con Laravel que se integra con Bitrix24 como backend de CRM. El sistema gestiona clientes, contratos, proyectos y tareas desde una interfaz a medida más intuitiva que el panel por defecto de Bitrix. Usa OAuth2 para autenticación y la REST API de Bitrix24 para sincronizar todos los datos en tiempo real.",
-      "short_description": "Plataforma Laravel con OAuth2 e integración completa a Bitrix24 REST API. Gestión de clientes y proyectos.",
+      "title": "Sistema Web para Fincas de Palma",
+      "slug": "sistema-fincas-palma",
+      "subtitle": "Control de labores, cuadrillas, produccion, costos, insumos, maquinaria y reportes por finca.",
+      "description": "Proyecto independiente para digitalizar la administracion operativa de fincas de palma.\n\nEl sistema organiza fincas, lotes, cuadrillas, labores diarias, produccion, insumos, maquinaria, costos, asistencia de personal y reportes por periodo. Permite dejar de depender de libretas, hojas de calculo y consolidaciones manuales.\n\nLa arquitectura se disena para que administracion tenga visibilidad de costos por lote, rendimiento por cuadrilla, historial de labores y datos listos para analisis financiero.",
+      "short_description": "Sistema para fincas de palma: labores, cuadrillas, produccion, costos, insumos, maquinaria, asistencia y reportes.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [6, 7, 13],
+      "technologies": [1, 2, 3, 4, 5],
       "users_count": 15,
-      "duration_months": 8,
+      "duration_months": 6,
       "url_live": "",
       "url_repo": "",
-      "status": "active",
+      "status": "development",
       "carousel_order": 8,
       "created_at": "2024-09-01T00:00:00Z",
-      "updated_at": "2024-09-01T00:00:00Z"
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "projects.project",
     "pk": 10,
     "fields": {
-      "title": "API Empresarial con Django REST Framework",
-      "slug": "api-empresarial-drf",
-      "subtitle": "API REST robusta para conectar sistemas internos, apps móviles y terceros.",
-      "description": "Backend API construido con Django REST Framework para centralizar datos de una empresa con múltiples sistemas. La API sirve datos a una app móvil Flutter, a un panel web React y a integraciones externas. Implementa autenticación JWT, control de permisos por rol, rate limiting, documentación automática con Swagger y pruebas automatizadas.",
-      "short_description": "API REST con JWT, permisos por rol y documentación Swagger. Conecta app móvil Flutter, panel web y sistemas externos.",
+      "title": "Control Financiero Empresarial",
+      "slug": "control-financiero-empresarial",
+      "subtitle": "Sistema para ingresos, egresos, centros de costo, presupuestos, flujo de caja y reportes gerenciales.",
+      "description": "Proyecto independiente para empresas que necesitan ordenar sus finanzas operativas sin depender de archivos dispersos.\n\nLa plataforma permite registrar ingresos, egresos, cuentas, proveedores, centros de costo, presupuestos, flujo de caja, documentos y reportes gerenciales. Puede integrarse con modulos operativos para conocer costo real por proyecto, finca, cliente, puesto o departamento.\n\nEl enfoque es practico: datos claros, filtros utiles, trazabilidad de movimientos y reportes que ayuden a decidir antes de que el problema llegue a cierre de mes.",
+      "short_description": "Sistema financiero web para ingresos, egresos, centros de costo, presupuestos, flujo de caja y reportes gerenciales.",
       "is_featured": false,
       "cover_image": "",
-      "technologies": [2, 3, 4, 11],
+      "technologies": [1, 2, 3, 4, 5],
+      "users_count": 10,
+      "duration_months": 4,
+      "url_live": "",
+      "url_repo": "",
+      "status": "development",
+      "carousel_order": 9,
+      "created_at": "2024-10-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 11,
+    "fields": {
+      "title": "Integracion WordPress con Bitrix24 CRM",
+      "slug": "wordpress-bitrix24",
+      "subtitle": "Automatizacion de leads, formularios, contactos, deals y notificaciones hacia Bitrix24.",
+      "description": "Proyecto independiente de integracion comercial entre WordPress y Bitrix24.\n\nEl sistema captura formularios, cotizaciones o solicitudes desde WordPress y las envia al CRM con estructura correcta: contacto, empresa, deal, pipeline, responsable y notas de origen. Esto evita copiar datos manualmente, reduce leads perdidos y mejora el tiempo de respuesta del equipo comercial.\n\nLa integracion puede trabajar como plugin, webhook o servicio intermedio segun la arquitectura del cliente.",
+      "short_description": "Integracion WordPress + Bitrix24 para enviar leads, formularios y cotizaciones al CRM sin transcripcion manual.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [8, 7, 17],
+      "users_count": 5,
+      "duration_months": 2,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 10,
+      "created_at": "2024-11-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 12,
+    "fields": {
+      "title": "Integracion WordPress con Clockify",
+      "slug": "wordpress-clockify",
+      "subtitle": "Control de horas, proyectos, clientes y reportes de tiempo desde WordPress hacia Clockify.",
+      "description": "Proyecto independiente para conectar WordPress con Clockify y ordenar la gestion de horas.\n\nEl sistema permite asociar clientes, proyectos y tareas del sitio con espacios de trabajo en Clockify. Los administradores registran o consultan horas, los clientes pueden ver avances y el equipo evita duplicar informacion entre paneles.\n\nEs una solucion pensada para agencias, equipos de soporte o empresas que venden servicios por horas y necesitan visibilidad clara del tiempo invertido.",
+      "short_description": "Plugin e integracion WordPress + Clockify para registrar horas, consultar reportes y mostrar avances por cliente.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [8, 7, 18],
+      "users_count": 3,
+      "duration_months": 2,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 11,
+      "created_at": "2024-12-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 13,
+    "fields": {
+      "title": "Plataforma Laravel conectada con Bitrix24",
+      "slug": "laravel-bitrix24",
+      "subtitle": "Panel empresarial Laravel para clientes, contratos, proyectos y sincronizacion con Bitrix24.",
+      "description": "Proyecto independiente construido en Laravel para extender procesos comerciales conectados con Bitrix24.\n\nLa plataforma permite trabajar con clientes, contratos, proyectos, tareas y datos sincronizados desde el CRM, pero con una interfaz mas ajustada al flujo real de la empresa. Usa autenticacion, permisos, consumo de API y procesos de sincronizacion controlados.\n\nEste tipo de proyecto es util cuando el CRM resuelve parte del problema, pero la operacion necesita una capa propia mas clara y especifica.",
+      "short_description": "Plataforma Laravel integrada con Bitrix24 para clientes, contratos, proyectos, tareas y sincronizacion de datos.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [6, 7, 17],
+      "users_count": 15,
+      "duration_months": 8,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 12,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 14,
+    "fields": {
+      "title": "API Empresarial con Django REST Framework",
+      "slug": "api-empresarial-drf",
+      "subtitle": "Backend REST para conectar apps moviles, dashboards, integraciones y sistemas internos.",
+      "description": "Proyecto independiente de arquitectura backend para empresas que necesitan conectar varias interfaces sobre una misma fuente de datos.\n\nLa API expone recursos con permisos, serializadores, paginacion, filtros, autenticacion y endpoints pensados para paneles web, apps moviles, integraciones externas y reportes. Puede servir como nucleo para reemplazar hojas de calculo, procesos manuales o sistemas aislados.\n\nEl valor esta en ordenar contratos de datos, seguridad, versionamiento y crecimiento futuro sin rehacer todo desde cero.",
+      "short_description": "API REST empresarial con Django REST Framework para apps moviles, dashboards, integraciones y sistemas internos.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [1, 2, 3, 4, 9, 19],
       "users_count": 25,
       "duration_months": 5,
       "url_live": "",
       "url_repo": "",
       "status": "active",
-      "carousel_order": 9,
-      "created_at": "2024-10-01T00:00:00Z",
-      "updated_at": "2024-10-01T00:00:00Z"
+      "carousel_order": 13,
+      "created_at": "2025-02-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 15,
+    "fields": {
+      "title": "Bodegas e Inventario Operativo",
+      "slug": "bodegas-inventario-operativo",
+      "subtitle": "Sistema para entradas, salidas, existencias, responsables, requisiciones y alertas de inventario.",
+      "description": "Proyecto independiente para controlar bodegas, inventario y movimientos internos.\n\nEl sistema registra productos, categorias, entradas, salidas, responsables, requisiciones, minimo de stock, traslados, ajustes y reportes por periodo. Permite saber que hay, quien lo pidio, quien lo entrego, en que proyecto se uso y cuando se debe reponer.\n\nEs una solucion pensada para empresas que pierden tiempo conciliando inventario entre papel, mensajes y hojas de calculo.",
+      "short_description": "Sistema web de bodegas e inventario: entradas, salidas, stock minimo, responsables, requisiciones y reportes.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [1, 2, 3, 4, 5, 14],
+      "users_count": 12,
+      "duration_months": 3,
+      "url_live": "",
+      "url_repo": "",
+      "status": "development",
+      "carousel_order": 14,
+      "created_at": "2025-03-01T00:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
     }
   },
   {
     "model": "cases.casestudy",
     "pk": 1,
     "fields": {
-      "title": "De Excel a plataforma operativa en 90 días",
-      "slug": "excel-a-plataforma-operativa",
+      "title": "De controles dispersos a una plataforma operativa modular",
+      "slug": "plataforma-operativa-modular",
       "industry": "Seguridad privada",
-      "company_size": "100+ colaboradores operativos",
-      "problem": "Una empresa de seguridad privada manejaba asistencia, rondas, bitácoras y control vehicular en hojas de Excel y cuadernos físicos. La información se perdía, los errores eran frecuentes y procesar la planilla tomaba más de dos días al mes.",
-      "solution": "Diseñé e implementé SCT APP, una plataforma web Django con módulos de asistencia digital, rondas con QR, bitácoras electrónicas, control vehicular y generación automática de planilla. Un sistema central que reemplazó todos los controles manuales.",
-      "result": "La empresa eliminó los registros en papel, redujo el tiempo de planilla de 2 días a menos de 2 horas, y tiene visibilidad en tiempo real de más de 100 colaboradores en múltiples puestos simultáneamente.",
-      "metric_1_label": "usuarios activos en producción",
+      "company_size": "100+ usuarios operativos",
+      "problem": "La operacion dependia de hojas de Excel, registros en papel, mensajes por WhatsApp y aprobaciones dispersas. Asistencia, rondas, bitacoras, mutuos, extras y reportes no tenian una fuente unica confiable.",
+      "solution": "Disene SCT APP como una plataforma Django modular con asistencia, turnos, rondas QR/GPS, monitoreo, reportes, bitacoras, cache controlado, tareas periodicas y reglas defensivas para proteger historicos.",
+      "result": "La empresa obtuvo visibilidad operativa en tiempo real, redujo errores manuales y centralizo informacion critica sin borrar evidencias ni depender de archivos sueltos.",
+      "metric_1_label": "usuarios activos en produccion",
       "metric_1_value": "100+",
-      "metric_2_label": "reducción en tiempo de planilla",
-      "metric_2_value": "95%",
-      "metric_3_label": "registros en papel eliminados",
-      "metric_3_value": "0",
+      "metric_2_label": "modulos operativos integrados",
+      "metric_2_value": "8+",
+      "metric_3_label": "fuentes dispersas reemplazadas",
+      "metric_3_value": "Excel/papel",
       "is_published": true,
       "order": 1,
       "created_at": "2024-01-01T00:00:00Z"
@@ -320,37 +450,198 @@
     "model": "cases.casestudy",
     "pk": 2,
     "fields": {
-      "title": "Automatización de leads entre WordPress y Bitrix24",
-      "slug": "automatizacion-leads-wordpress-bitrix24",
-      "industry": "Ventas / CRM",
-      "company_size": "Equipo de ventas de 5 personas",
-      "problem": "El equipo de ventas recibía consultas por el sitio WordPress pero tenía que copiar manualmente los datos al CRM Bitrix24. Los leads se perdían, llegaban tarde o se duplicaban. El tiempo de respuesta era de horas.",
-      "solution": "Desarrollé una integración personalizada que captura automáticamente cada formulario del sitio WordPress y lo envía al pipeline correcto en Bitrix24 en tiempo real, con notificación inmediata al vendedor asignado.",
-      "result": "El tiempo de respuesta a prospectos bajó de horas a minutos. Se eliminó la transcripción manual. El equipo de ventas opera ahora desde Bitrix24 sin tocar WordPress.",
-      "metric_1_label": "tiempo de respuesta a leads",
-      "metric_1_value": "< 2 min",
-      "metric_2_label": "leads perdidos por transcripción",
+      "title": "Rondas que se sincronizan solas con el turno activo",
+      "slug": "rondas-sincronizadas-turno-activo",
+      "industry": "Seguridad y monitoreo",
+      "company_size": "Operacion 24/7",
+      "problem": "Algunas rondas no aparecian automaticamente aunque el oficial estuviera en turno y existiera configuracion vigente. El sistema dependia de ediciones manuales para despertar estados.",
+      "solution": "Centralice la sincronizacion de rondas para que entrada, perfil, polling y cron usen la misma regla: turno activo + configuracion vigente + deadline calculado desde la entrada real.",
+      "result": "Las rondas quedan disponibles sin intervencion manual, con WebSockets, cache limpio, cron operativo y reglas seguras para mutuos acuerdos.",
+      "metric_1_label": "sincronizacion automatica",
+      "metric_1_value": "4 flujos",
+      "metric_2_label": "dependencia de edicion manual",
       "metric_2_value": "0",
-      "metric_3_label": "horas manuales eliminadas por semana",
-      "metric_3_value": "8+",
+      "metric_3_label": "fuente operativa",
+      "metric_3_value": "turno activo",
       "is_published": true,
       "order": 2,
+      "created_at": "2024-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 3,
+    "fields": {
+      "title": "Correcciones de asistencia sin romper historicos",
+      "slug": "asistencia-sin-romper-historicos",
+      "industry": "Administracion operativa",
+      "company_size": "Reportes web y PDF",
+      "problem": "Una correccion de puesto, solicitud o justificacion podia afectar filas de extras o reportes porque el origen visual no siempre era un unico modelo.",
+      "solution": "Refine la logica del reporte para validar oficial, fecha, puesto, horario, entrada y origen. Las justificaciones asociadas a marcas reales solo aplican a la fila cuya entrada coincide.",
+      "result": "El reporte web y PDF pueden conservar datos historicos, evitar duplicados y explicar correcciones sin borrar registros ni bitacoras.",
+      "metric_1_label": "historicos borrados",
+      "metric_1_value": "0",
+      "metric_2_label": "trazabilidad administrativa",
+      "metric_2_value": "100%",
+      "metric_3_label": "reportes coherentes",
+      "metric_3_value": "web/PDF",
+      "is_published": true,
+      "order": 3,
+      "created_at": "2024-06-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 4,
+    "fields": {
+      "title": "Videovigilancia conectada a software operativo",
+      "slug": "videovigilancia-software-operativo",
+      "industry": "Infraestructura y seguridad",
+      "company_size": "Empresas con monitoreo centralizado",
+      "problem": "Las camaras grababan, pero las alertas, responsables, mantenimientos y evidencias quedaban fuera de un sistema administrativo claro.",
+      "solution": "Plantee una arquitectura con camaras IP, NVR, acceso Dahua/DMSS, servidor VPS y panel Django para registrar alertas, eventos, tickets y trazabilidad de monitoreo.",
+      "result": "La infraestructura fisica se conecta con procesos digitales, permitiendo revisar grabaciones, documentar eventos y mantener seguimiento administrativo.",
+      "metric_1_label": "capas integradas",
+      "metric_1_value": "NVR+VPS",
+      "metric_2_label": "trazabilidad de alertas",
+      "metric_2_value": "24/7",
+      "metric_3_label": "gestion centralizada",
+      "metric_3_value": "Django",
+      "is_published": true,
+      "order": 4,
       "created_at": "2024-07-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 5,
+    "fields": {
+      "title": "Control de acceso para condominios sin papel",
+      "slug": "condominios-control-acceso",
+      "industry": "Residencial / Condominios",
+      "company_size": "Caseta, administracion y residentes",
+      "problem": "El ingreso de visitantes y vehiculos dependia de llamadas, cuadernos y autorizaciones dificiles de consultar despues.",
+      "solution": "Disene un portal para registrar visitantes, placas, residentes, proveedores, autorizaciones temporales, bitacora e incidencias desde caseta.",
+      "result": "La administracion puede consultar historial por casa, visitante, vehiculo o fecha, reduciendo registros incompletos y mejorando control de seguridad.",
+      "metric_1_label": "registros en papel",
+      "metric_1_value": "0",
+      "metric_2_label": "consulta historica",
+      "metric_2_value": "por filtro",
+      "metric_3_label": "operacion en caseta",
+      "metric_3_value": "digital",
+      "is_published": true,
+      "order": 5,
+      "created_at": "2024-08-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 6,
+    "fields": {
+      "title": "Operacion agricola con datos de costos y produccion",
+      "slug": "fincas-palma-costos-produccion",
+      "industry": "Agricultura / Palma",
+      "company_size": "Fincas, cuadrillas y administracion",
+      "problem": "La produccion, labores, insumos y costos se consolidaban manualmente, dificultando saber rendimiento real por lote o cuadrilla.",
+      "solution": "Propuse un sistema web para registrar labores, produccion, insumos, maquinaria, asistencia y costos, con reportes por finca, lote y periodo.",
+      "result": "La operacion puede analizar costos y rendimiento desde una fuente de datos ordenada, lista para decisiones financieras y operativas.",
+      "metric_1_label": "control por lote",
+      "metric_1_value": "100%",
+      "metric_2_label": "reportes por periodo",
+      "metric_2_value": "si",
+      "metric_3_label": "datos dispersos",
+      "metric_3_value": "centralizados",
+      "is_published": true,
+      "order": 6,
+      "created_at": "2024-09-01T00:00:00Z"
     }
   },
   {
     "model": "blog.category",
     "pk": 1,
-    "fields": { "name": "Django", "slug": "django", "description": "Desarrollo con Django y Python", "order": 1 }
+    "fields": { "name": "Django", "slug": "django", "description": "Arquitectura de sistemas web con Django", "order": 1 }
   },
   {
     "model": "blog.category",
     "pk": 2,
-    "fields": { "name": "Automatización", "slug": "automatizacion", "description": "Procesos automáticos y scripts", "order": 2 }
+    "fields": { "name": "Operaciones", "slug": "operaciones", "description": "Sistemas para procesos operativos reales", "order": 2 }
   },
   {
     "model": "blog.category",
     "pk": 3,
-    "fields": { "name": "Integraciones", "slug": "integraciones", "description": "APIs y conexiones entre sistemas", "order": 3 }
+    "fields": { "name": "Integraciones", "slug": "integraciones", "description": "APIs, CRM, NVR, VPS y sistemas conectados", "order": 3 }
+  },
+  {
+    "model": "blog.category",
+    "pk": 4,
+    "fields": { "name": "Seguridad", "slug": "seguridad", "description": "Rondas, videovigilancia, monitoreo y trazabilidad", "order": 4 }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 1,
+    "fields": {
+      "title": "Por que una plataforma operativa no debe ser solo un formulario",
+      "slug": "plataforma-operativa-no-es-formulario",
+      "category": 2,
+      "excerpt": "Un sistema empresarial serio debe entender turnos, historicos, permisos, auditoria, excepciones y reportes, no solo guardar datos.",
+      "content": "Una plataforma operativa no se mide por cuantas pantallas tiene, sino por cuanta realidad entiende.\n\nEn una empresa con operacion diaria, una fila de reporte puede venir de un turno recurrente, una extra, una solicitud aprobada, una justificacion, un mutuo acuerdo o un registro real. Si el sistema no distingue esas fuentes, termina mostrando datos faciles pero incorrectos.\n\nPor eso construyo sistemas con modelos claros, reglas defensivas, auditoria y validaciones. La meta no es digitalizar el desorden, sino convertirlo en una fuente de datos confiable para trabajar, corregir y decidir.",
+      "cover_image": "",
+      "status": "published",
+      "reading_time": 4,
+      "published_at": "2026-06-01T08:00:00Z",
+      "created_at": "2026-06-01T08:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 2,
+    "fields": {
+      "title": "Rondas QR/GPS: el turno activo como fuente de verdad",
+      "slug": "rondas-qr-gps-turno-activo",
+      "category": 4,
+      "excerpt": "La regla que evita inconsistencias en rondas: el dueno del turno activo debe ser el dueno del estado, deadline e incumplimiento.",
+      "content": "En sistemas de rondas, el error peligroso no siempre esta en el QR o en el GPS. Muchas veces esta en decidir a que oficial pertenece el estado operativo.\n\nLa regla que uso es simple: el dueno del turno activo es el dueno de la ronda. En casos de cobertura o mutuo acuerdo, el oficial fisico puede usar el celular, pero el estado, el deadline, la ronda y el incumplimiento pertenecen al oficial registro.\n\nEsa diferencia permite que monitoreo vea la operacion correctamente, que el celular reciba WebSockets cuando corresponde y que el historial no se contamine con datos de otra persona.",
+      "cover_image": "",
+      "status": "published",
+      "reading_time": 5,
+      "published_at": "2026-06-02T08:00:00Z",
+      "created_at": "2026-06-02T08:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 3,
+    "fields": {
+      "title": "Correcciones seguras en sistemas con datos historicos",
+      "slug": "correcciones-seguras-datos-historicos",
+      "category": 1,
+      "excerpt": "Antes de modificar produccion hay que leer, validar, explicar riesgo, cambiar lo minimo y dejar evidencia.",
+      "content": "En sistemas operativos reales, corregir datos no significa borrar y volver a crear.\n\nUna asistencia, una foto, una bitacora o una salida son historicos sensibles. Antes de tocar algo hay que diagnosticar con datos reales, validar IDs exactos, entender el origen de la fila, aplicar el cambio minimo y dejar una bitacora correctiva.\n\nEse enfoque evita soluciones rapidas que arreglan una pantalla y rompen tres reportes. La arquitectura tambien debe ayudar: transacciones, select_for_update cuando corresponde, cache versionado y reportes que expliquen la operacion sin inventar datos.",
+      "cover_image": "",
+      "status": "published",
+      "reading_time": 4,
+      "published_at": "2026-06-03T08:00:00Z",
+      "created_at": "2026-06-03T08:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 4,
+    "fields": {
+      "title": "Cuando las camaras necesitan software, no solo grabacion",
+      "slug": "camaras-necesitan-software-no-solo-grabacion",
+      "category": 3,
+      "excerpt": "NVR, Dahua/DMSS, VPS y Django pueden trabajar juntos para convertir video en trazabilidad operativa.",
+      "content": "Instalar camaras resuelve una parte del problema. La otra parte es administrar alertas, responsables, evidencias, mantenimiento y seguimiento.\n\nUna arquitectura empresarial puede combinar camaras IP, NVR, acceso remoto por DMSS/Dahua, un VPS y una plataforma Django para registrar eventos. El video queda en el NVR, pero la operacion queda documentada en el sistema: que paso, quien lo reviso, que accion se tomo y que evidencia se relaciona.\n\nEse puente entre infraestructura y software es donde la videovigilancia deja de ser solo grabacion y se vuelve control operativo.",
+      "cover_image": "",
+      "status": "published",
+      "reading_time": 4,
+      "published_at": "2026-06-04T08:00:00Z",
+      "created_at": "2026-06-04T08:00:00Z",
+      "updated_at": "2026-06-06T00:00:00Z"
+    }
   }
 ]
