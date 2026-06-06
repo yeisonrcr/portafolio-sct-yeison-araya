@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Mensaje enviado — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero--center">
+  <div class="section-container">
+    <div class="success-icon">✓</div>
+    <h1 class="page-title">Mensaje recibido</h1>
+    <p class="page-subtitle">
+      Gracias por escribirme. Me pondré en contacto contigo pronto.
+    </p>
+    <a href="{% url 'core:home' %}" class="btn btn--gold">Volver al inicio</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+<header class="navbar" id="navbar">
+  <div class="navbar__container">
+    <a href="{% url 'core:home' %}" class="navbar__logo">
+      <span class="navbar__logo-text">YA<span class="navbar__logo-dot">.</span></span>
+    </a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="navbar__nav" id="navMenu">
+      <ul class="navbar__list">
+        <li><a href="{% url 'core:home' %}" class="navbar__link">Inicio</a></li>
+        <li><a href="{% url 'core:about' %}" class="navbar__link">Sobre mí</a></li>
+        <li><a href="{% url 'projects:list' %}" class="navbar__link">Proyectos</a></li>
+        <li><a href="{% url 'cases:list' %}" class="navbar__link">Casos</a></li>
+        <li><a href="{% url 'blog:list' %}" class="navbar__link">Blog</a></li>
+        <li>
+          <a href="{% url 'contact:contact' %}" class="navbar__link navbar__link--cta">
+            Contactar
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

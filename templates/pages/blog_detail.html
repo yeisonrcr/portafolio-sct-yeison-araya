@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }} — Yeison Araya{% endblock %}
+{% block meta_description %}{{ post.excerpt|truncatechars:160 }}{% endblock %}
+
+{% block content %}
+<article class="post-detail">
+  <section class="page-hero">
+    <div class="section-container">
+      <a href="{% url 'blog:list' %}" class="back-link">← Blog</a>
+      {% if post.category %}<span class="section-label">{{ post.category.name }}</span>{% endif %}
+      <h1 class="page-title">{{ post.title }}</h1>
+      <div class="post-detail__meta">
+        <span>{{ post.reading_time }} min de lectura</span>
+        {% if post.published_at %}<span>{{ post.published_at|date:"d M Y" }}</span>{% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% if post.cover_image %}
+    <div class="post-detail__cover">
+      <div class="section-container">
+        <img src="{{ post.cover_image.url }}" alt="{{ post.title }}" />
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="section-container post-detail__body">
+    <div class="post-content">{{ post.content|linebreaks }}</div>
+  </div>
+</article>
+
+{% if related %}
+<section class="section-container related-posts">
+  <h2 class="section-title">Posts relacionados</h2>
+  <div class="blog-grid">
+    {% for p in related %}
+      <article class="blog-card">
+        <div class="blog-card__body">
+          <h3 class="blog-card__title">
+            <a href="{% url 'blog:detail' p.slug %}">{{ p.title }}</a>
+          </h3>
+          <p class="blog-card__excerpt">{{ p.excerpt|truncatechars:120 }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contacto — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-container">
+    <span class="section-label">Hablemos</span>
+    <h1 class="page-title">Contacto</h1>
+    <p class="page-subtitle">
+      ¿Tienes un problema operativo que resolver?<br/>Cuéntame.
+    </p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="section-container contact-grid">
+    <div class="contact-info" data-gsap="slide-right">
+      <h2 class="contact-info__title">¿En qué puedo ayudarte?</h2>
+      <ul class="contact-info__list">
+        <li>✦ Plataformas web empresariales a medida</li>
+        <li>✦ Automatización de procesos operativos</li>
+        <li>✦ Integraciones con APIs externas</li>
+        <li>✦ Dashboards y reportes en tiempo real</li>
+        <li>✦ Sistemas de asistencia, planilla y rondas</li>
+        <li>✦ Migraciones desde Excel a sistemas digitales</li>
+      </ul>
+    </div>
+
+    <div class="contact-form-wrap" data-gsap="slide-left">
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group {% if field.errors %}form-group--error{% endif %}">
+            <label class="form-label" for="{{ field.id_for_label }}">
+              {{ field.label }}{% if field.field.required %} *{% endif %}
+            </label>
+            {{ field }}
+            {% for error in field.errors %}
+              <span class="form-error">{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        <button type="submit" class="btn btn--gold btn--block">
+          Enviar mensaje →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

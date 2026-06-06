@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════════════════
+   ANIMATIONS — Keyframes CSS + estados iniciales para GSAP
+═══════════════════════════════════════════════════════════ */
+
+/* ─── Keyframes ──────────────────────────────────────── */
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(212,175,55,0); }
+  50%       { box-shadow: 0 0 20px rgba(212,175,55,0.3); }
+}
+
+/* ─── Estados iniciales para GSAP ───────────────────── */
+/* Los elementos con data-gsap comienzan invisibles;
+   gsap_animations.js los anima al entrar en viewport */
+
+[data-gsap="fade-up"] {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+[data-gsap="slide-right"] {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+[data-gsap="slide-left"] {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* ─── Cursor trail ───────────────────────────────────── */
+.cursor-dot {
+  position: fixed;
+  pointer-events: none;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+.cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(212,175,55,0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+/* ─── Loader ─────────────────────────────────────────── */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.page-loader__logo {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.05em;
+}
+
+.page-loader__logo span { color: var(--gold); }

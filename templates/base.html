@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Yeison Araya — Arquitecto de Software Operativo{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Creo plataformas web empresariales a medida para automatizar procesos reales.{% endblock %}" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/components.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+  <!-- GSAP CDN (sin NPM) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+  {% include 'components/navbar.html' %}
+
+  <main id="main-content">
+    {% if messages %}
+      <div class="messages-container">
+        {% for msg in messages %}
+          <div class="message message--{{ msg.tags }}">{{ msg }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'components/footer.html' %}
+
+  <!-- JS -->
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/gsap_animations.js' %}" defer></script>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

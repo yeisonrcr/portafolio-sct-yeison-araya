@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Casos de éxito — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-container">
+    <span class="section-label">Resultados reales</span>
+    <h1 class="page-title">Casos de éxito</h1>
+    <p class="page-subtitle">Problemas empresariales reales. Soluciones construidas desde cero.</p>
+  </div>
+</section>
+
+<section class="section-container">
+  <div class="cases-list">
+    {% for case in cases %}
+      <article class="case-full" data-gsap="fade-up">
+        <div class="case-full__header">
+          <span class="case-full__industry">{{ case.industry }}</span>
+          <h2 class="case-full__title">{{ case.title }}</h2>
+        </div>
+        <div class="case-full__grid">
+          <div class="case-full__block">
+            <h3 class="case-full__label">Problema</h3>
+            <p>{{ case.problem }}</p>
+          </div>
+          <div class="case-full__block">
+            <h3 class="case-full__label">Solución</h3>
+            <p>{{ case.solution }}</p>
+          </div>
+          <div class="case-full__block">
+            <h3 class="case-full__label">Resultado</h3>
+            <p>{{ case.result }}</p>
+          </div>
+        </div>
+        {% if case.metric_1_value %}
+          <div class="case-full__metrics">
+            {% if case.metric_1_value %}<div class="metric-item"><strong>{{ case.metric_1_value }}</strong><span>{{ case.metric_1_label }}</span></div>{% endif %}
+            {% if case.metric_2_value %}<div class="metric-item"><strong>{{ case.metric_2_value }}</strong><span>{{ case.metric_2_label }}</span></div>{% endif %}
+            {% if case.metric_3_value %}<div class="metric-item"><strong>{{ case.metric_3_value }}</strong><span>{{ case.metric_3_label }}</span></div>{% endif %}
+          </div>
+        {% endif %}
+        <a href="{% url 'cases:detail' case.slug %}" class="btn btn--outline">Ver detalles →</a>
+      </article>
+    {% empty %}
+      <p class="empty-state">Casos en preparación.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

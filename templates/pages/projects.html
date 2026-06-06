@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Proyectos — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-container">
+    <span class="section-label">Portafolio</span>
+    <h1 class="page-title">Proyectos</h1>
+    <p class="page-subtitle">Plataformas que resuelven problemas reales de empresas.</p>
+  </div>
+</section>
+
+{% if featured %}
+<section class="section-container featured-banner" data-gsap="fade-up">
+  <div class="featured-banner__inner">
+    <span class="featured-banner__label">★ Proyecto principal</span>
+    <h2>{{ featured.title }}</h2>
+    <p>{{ featured.short_description }}</p>
+    <a href="{% url 'projects:detail' featured.slug %}" class="btn btn--gold">Ver detalles</a>
+  </div>
+</section>
+{% endif %}
+
+<section class="section-container projects-full">
+  <div class="projects-grid">
+    {% for project in projects %}
+      {% include 'components/project_card.html' %}
+    {% empty %}
+      <p class="empty-state">Próximamente — proyectos en camino.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ case.title }} — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-container">
+    <a href="{% url 'cases:list' %}" class="back-link">← Casos de éxito</a>
+    <span class="section-label">{{ case.industry }}</span>
+    <h1 class="page-title">{{ case.title }}</h1>
+  </div>
+</section>
+
+<section class="section-container case-detail">
+  <div class="case-detail__grid">
+    <div class="case-detail__block" data-gsap="fade-up">
+      <h2 class="case-detail__label">El problema</h2>
+      <p>{{ case.problem }}</p>
+    </div>
+    <div class="case-detail__block" data-gsap="fade-up">
+      <h2 class="case-detail__label">La solución</h2>
+      <p>{{ case.solution }}</p>
+    </div>
+    <div class="case-detail__block case-detail__block--result" data-gsap="fade-up">
+      <h2 class="case-detail__label">El resultado</h2>
+      <p>{{ case.result }}</p>
+    </div>
+  </div>
+  {% if case.metric_1_value %}
+    <div class="cases-metrics" data-gsap="fade-up">
+      {% if case.metric_1_value %}<div class="metric-item"><strong>{{ case.metric_1_value }}</strong><span>{{ case.metric_1_label }}</span></div>{% endif %}
+      {% if case.metric_2_value %}<div class="metric-item"><strong>{{ case.metric_2_value }}</strong><span>{{ case.metric_2_label }}</span></div>{% endif %}
+      {% if case.metric_3_value %}<div class="metric-item"><strong>{{ case.metric_3_value }}</strong><span>{{ case.metric_3_label }}</span></div>{% endif %}
+    </div>
+  {% endif %}
+  <div class="section-cta">
+    <a href="{% url 'contact:contact' %}" class="btn btn--gold">Necesito una solución similar →</a>
+  </div>
+</section>
+{% endblock %}

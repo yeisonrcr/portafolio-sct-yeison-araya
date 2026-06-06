@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard — Yeison Araya{% endblock %}
+
+{% block body_class %}dashboard-body{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+  <div class="dashboard__header">
+    <h1 class="dashboard__title">Panel de administración</h1>
+    <a href="{% url 'dashboard:logout' %}" class="btn btn--outline btn--sm">Cerrar sesión</a>
+  </div>
+
+  <div class="dashboard__stats">
+    <div class="stat-card">
+      <span class="stat-card__value">{{ total_projects }}</span>
+      <span class="stat-card__label">Proyectos activos</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value">{{ total_posts }}</span>
+      <span class="stat-card__label">Posts publicados</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value">{{ total_cases }}</span>
+      <span class="stat-card__label">Casos de éxito</span>
+    </div>
+    <div class="stat-card stat-card--highlight">
+      <span class="stat-card__value">{{ new_messages }}</span>
+      <span class="stat-card__label">Mensajes nuevos</span>
+    </div>
+  </div>
+
+  <div class="dashboard__section">
+    <h2 class="dashboard__section-title">Mensajes recientes</h2>
+    {% if recent_messages %}
+      <div class="messages-table-wrap">
+        <table class="messages-table">
+          <thead>
+            <tr>
+              <th>Nombre</th><th>Empresa</th><th>Asunto</th><th>Estado</th><th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for msg in recent_messages %}
+              <tr class="{% if msg.status == 'new' %}row--new{% endif %}">
+                <td>{{ msg.name }}</td>
+                <td>{{ msg.company|default:"—" }}</td>
+                <td>{{ msg.subject|truncatechars:50 }}</td>
+                <td><span class="status-badge status-badge--{{ msg.status }}">{{ msg.get_status_display }}</span></td>
+                <td>{{ msg.created_at|date:"d/m/Y H:i" }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p class="empty-state">No hay mensajes aún.</p>
+    {% endif %}
+  </div>
+
+  <div class="dashboard__links">
+    <a href="/admin/" class="btn btn--gold">Admin Django →</a>
+  </div>
+</div>
+{% endblock %}

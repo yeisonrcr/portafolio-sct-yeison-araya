@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Acceso — Yeison Araya{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero--center">
+  <div class="section-container">
+    <h1 class="page-title">Acceso privado</h1>
+  </div>
+</section>
+
+<div class="login-wrap">
+  <form method="post" class="login-form">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% for error in field.errors %}<span class="form-error">{{ error }}</span>{% endfor %}
+      </div>
+    {% endfor %}
+    {% if form.non_field_errors %}
+      <div class="form-error form-error--global">{{ form.non_field_errors }}</div>
+    {% endif %}
+    <button type="submit" class="btn btn--gold btn--block">Ingresar</button>
+  </form>
+</div>
+{% endblock %}

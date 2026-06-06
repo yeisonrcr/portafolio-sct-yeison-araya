@@ -1,0 +1,356 @@
+[
+  {
+    "model": "projects.technology",
+    "pk": 1,
+    "fields": { "name": "Python", "slug": "python", "icon_class": "devicon-python-plain", "color": "#D4AF37", "order": 1 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 2,
+    "fields": { "name": "Django", "slug": "django", "icon_class": "devicon-django-plain", "color": "#D4AF37", "order": 2 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 3,
+    "fields": { "name": "Django REST Framework", "slug": "drf", "icon_class": "", "color": "#D4AF37", "order": 3 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 4,
+    "fields": { "name": "PostgreSQL", "slug": "postgresql", "icon_class": "devicon-postgresql-plain", "color": "#D4AF37", "order": 4 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 5,
+    "fields": { "name": "JavaScript", "slug": "javascript", "icon_class": "devicon-javascript-plain", "color": "#D4AF37", "order": 5 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 6,
+    "fields": { "name": "Laravel", "slug": "laravel", "icon_class": "devicon-laravel-plain", "color": "#D4AF37", "order": 6 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 7,
+    "fields": { "name": "PHP", "slug": "php", "icon_class": "devicon-php-plain", "color": "#D4AF37", "order": 7 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 8,
+    "fields": { "name": "WordPress", "slug": "wordpress", "icon_class": "devicon-wordpress-plain", "color": "#D4AF37", "order": 8 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 9,
+    "fields": { "name": "Docker", "slug": "docker", "icon_class": "devicon-docker-plain", "color": "#D4AF37", "order": 9 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 10,
+    "fields": { "name": "Railway", "slug": "railway", "icon_class": "", "color": "#D4AF37", "order": 10 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 11,
+    "fields": { "name": "Flutter", "slug": "flutter", "icon_class": "devicon-flutter-plain", "color": "#D4AF37", "order": 11 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 12,
+    "fields": { "name": "Go", "slug": "go", "icon_class": "devicon-go-plain", "color": "#D4AF37", "order": 12 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 13,
+    "fields": { "name": "Bitrix24 API", "slug": "bitrix24", "icon_class": "", "color": "#D4AF37", "order": 13 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 14,
+    "fields": { "name": "Clockify API", "slug": "clockify", "icon_class": "", "color": "#D4AF37", "order": 14 }
+  },
+  {
+    "model": "projects.technology",
+    "pk": 15,
+    "fields": { "name": "QR Codes", "slug": "qr-codes", "icon_class": "", "color": "#D4AF37", "order": 15 }
+  },
+  {
+    "model": "projects.project",
+    "pk": 1,
+    "fields": {
+      "title": "SCT APP — Plataforma Operativa Empresarial",
+      "slug": "sct-app",
+      "subtitle": "Sistema completo para seguridad privada: asistencia, rondas, vehículos, planilla y reportes.",
+      "description": "SCT APP es una plataforma web empresarial construida con Django para digitalizar y automatizar las operaciones de una empresa de seguridad privada con más de 100 usuarios activos.\n\nAntes de SCT APP, los procesos de asistencia, control de rondas, bitácoras, vehículos y planilla operativa se manejaban en hojas de Excel, registros en papel y comunicaciones por WhatsApp. Eso generaba errores, pérdida de información crítica y horas de trabajo manual.\n\nSCT APP reemplaza todos esos controles con un sistema centralizado, accesible desde cualquier dispositivo con conexión a internet. Los supervisores registran rondas con QR y mapas. Los operativos marcan asistencia digital. Los administradores generan reportes en tiempo real. La planilla se calcula automáticamente.\n\nEl sistema está en producción, funciona de lunes a domingo con múltiples usuarios simultáneos y tiene un costo de infraestructura mínimo gracias a su arquitectura eficiente sobre Railway.",
+      "short_description": "Plataforma Django en producción para +100 usuarios. Automatiza asistencia, rondas, vehículos, bitácoras y planilla operativa. Reemplaza Excel y controles manuales.",
+      "is_featured": true,
+      "cover_image": "",
+      "technologies": [1, 2, 3, 4, 5, 9, 10, 15],
+      "users_count": 100,
+      "duration_months": 24,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 0,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 2,
+    "fields": {
+      "title": "Sistema de Control Vehicular Empresarial",
+      "slug": "control-vehicular",
+      "subtitle": "Control de entradas, salidas, kilometraje y mantenimiento de flota.",
+      "description": "Sistema web para gestionar la flota vehicular de una empresa operativa. Registra entradas, salidas, conductores asignados, kilometraje, combustible y mantenimientos preventivos. Los administradores visualizan el estado de cada vehículo en tiempo real y reciben alertas automáticas cuando un vehículo requiere servicio.",
+      "short_description": "Control de flota vehicular con registros de entradas, salidas, combustible y mantenimiento. Alertas automáticas.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 4, 5],
+      "users_count": 30,
+      "duration_months": 6,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 1,
+      "created_at": "2024-02-01T00:00:00Z",
+      "updated_at": "2024-02-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 3,
+    "fields": {
+      "title": "Sistema de Rondas con QR y Mapas",
+      "slug": "rondas-qr",
+      "subtitle": "Control de rondas de seguridad con códigos QR, geolocalización y reportes.",
+      "description": "Plataforma para verificar que los oficiales de seguridad realizan sus recorridos correctamente. Cada punto de control tiene un código QR único. Al escanear, el sistema registra hora, usuario y ubicación GPS. Los supervisores ven el avance de las rondas en tiempo real y generan reportes de cumplimiento por turno.",
+      "short_description": "Verificación de rondas con QR y GPS. Control de cumplimiento en tiempo real para supervisores.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 4, 5, 15],
+      "users_count": 50,
+      "duration_months": 4,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 2,
+      "created_at": "2024-03-01T00:00:00Z",
+      "updated_at": "2024-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 4,
+    "fields": {
+      "title": "Plataforma de Bitácoras Digitales",
+      "slug": "bitacoras-digitales",
+      "subtitle": "Reemplazo de cuadernos físicos por un sistema digital de registros operativos.",
+      "description": "Sistema para reemplazar los cuadernos de bitácora físicos que usaban los oficiales de seguridad en sus puestos. Los operativos registran novedades, incidentes, visitantes y reportes directamente desde cualquier dispositivo. Los supervisores consultan el historial completo por puesto, turno o fecha. Se eliminaron los reportes en papel y el tiempo de transcripción manual.",
+      "short_description": "Reemplazo digital de cuadernos de bitácora. Registro de novedades, incidentes y visitantes desde cualquier dispositivo.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 4, 5],
+      "users_count": 60,
+      "duration_months": 3,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 3,
+      "created_at": "2024-04-01T00:00:00Z",
+      "updated_at": "2024-04-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 5,
+    "fields": {
+      "title": "Sistema de Control de Planilla Operativa",
+      "slug": "planilla-operativa",
+      "subtitle": "Automatización del cálculo de horas, turnos, extras y deducciones.",
+      "description": "Módulo de planilla integrado a SCT APP que calcula automáticamente las horas trabajadas, horas extras, deducciones y liquidaciones de cada colaborador. El sistema toma los registros de asistencia y los convierte en un resumen de planilla exportable. Reemplazó el proceso manual en Excel que tomaba días en completarse.",
+      "short_description": "Cálculo automático de planilla desde registros de asistencia. Exportable a Excel. Reemplaza proceso manual de días.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 4, 5],
+      "users_count": 10,
+      "duration_months": 4,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 4,
+      "created_at": "2024-05-01T00:00:00Z",
+      "updated_at": "2024-05-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 6,
+    "fields": {
+      "title": "Portal para Condominios y Entradas Rápidas",
+      "slug": "portal-condominios",
+      "subtitle": "Control de acceso para condominios con registro de visitantes y vehículos.",
+      "description": "Plataforma web para gestionar el acceso a condominios residenciales. Los guardas registran visitantes, vehículos y entregas desde una tablet en la entrada. Los residentes reciben notificaciones de visitas. Los administradores del condominio consultan el historial de accesos y generan reportes de seguridad.",
+      "short_description": "Control de acceso para condominios. Registro digital de visitantes, vehículos y entregas con notificaciones.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 4, 5, 15],
+      "users_count": 20,
+      "duration_months": 5,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 5,
+      "created_at": "2024-06-01T00:00:00Z",
+      "updated_at": "2024-06-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 7,
+    "fields": {
+      "title": "Integración WordPress con Bitrix24",
+      "slug": "wordpress-bitrix24",
+      "subtitle": "Sincronización automática de leads y clientes entre WordPress y Bitrix24 CRM.",
+      "description": "Integración personalizada que captura formularios de contacto y cotizaciones desde un sitio WordPress y los envía automáticamente al CRM Bitrix24. El sistema sincroniza contactos, crea deals en el pipeline correcto y notifica al equipo de ventas. Eliminó la transcripción manual de leads y redujo el tiempo de respuesta a prospectos.",
+      "short_description": "Sincronización automática WordPress → Bitrix24. Leads y formularios directo al CRM sin intervención manual.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [8, 7, 13],
+      "users_count": 5,
+      "duration_months": 2,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 6,
+      "created_at": "2024-07-01T00:00:00Z",
+      "updated_at": "2024-07-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 8,
+    "fields": {
+      "title": "Integración WordPress con Clockify",
+      "slug": "wordpress-clockify",
+      "subtitle": "Control de horas de proyectos desde WordPress sincronizado con Clockify.",
+      "description": "Plugin personalizado de WordPress que conecta los proyectos del sitio con la API de Clockify para registrar y consultar horas trabajadas. Los clientes ven desde su área privada cuántas horas se han invertido en su proyecto. Los administradores sincronizan reportes de tiempo directamente desde el panel de WordPress.",
+      "short_description": "Plugin WordPress que conecta proyectos con Clockify API. Reportes de horas visibles para clientes.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [8, 7, 14],
+      "users_count": 3,
+      "duration_months": 2,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 7,
+      "created_at": "2024-08-01T00:00:00Z",
+      "updated_at": "2024-08-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 9,
+    "fields": {
+      "title": "Plataforma Laravel conectada con Bitrix24",
+      "slug": "laravel-bitrix24",
+      "subtitle": "Sistema empresarial Laravel con integración completa al ecosistema Bitrix24.",
+      "description": "Plataforma web construida con Laravel que se integra con Bitrix24 como backend de CRM. El sistema gestiona clientes, contratos, proyectos y tareas desde una interfaz a medida más intuitiva que el panel por defecto de Bitrix. Usa OAuth2 para autenticación y la REST API de Bitrix24 para sincronizar todos los datos en tiempo real.",
+      "short_description": "Plataforma Laravel con OAuth2 e integración completa a Bitrix24 REST API. Gestión de clientes y proyectos.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [6, 7, 13],
+      "users_count": 15,
+      "duration_months": 8,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 8,
+      "created_at": "2024-09-01T00:00:00Z",
+      "updated_at": "2024-09-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 10,
+    "fields": {
+      "title": "API Empresarial con Django REST Framework",
+      "slug": "api-empresarial-drf",
+      "subtitle": "API REST robusta para conectar sistemas internos, apps móviles y terceros.",
+      "description": "Backend API construido con Django REST Framework para centralizar datos de una empresa con múltiples sistemas. La API sirve datos a una app móvil Flutter, a un panel web React y a integraciones externas. Implementa autenticación JWT, control de permisos por rol, rate limiting, documentación automática con Swagger y pruebas automatizadas.",
+      "short_description": "API REST con JWT, permisos por rol y documentación Swagger. Conecta app móvil Flutter, panel web y sistemas externos.",
+      "is_featured": false,
+      "cover_image": "",
+      "technologies": [2, 3, 4, 11],
+      "users_count": 25,
+      "duration_months": 5,
+      "url_live": "",
+      "url_repo": "",
+      "status": "active",
+      "carousel_order": 9,
+      "created_at": "2024-10-01T00:00:00Z",
+      "updated_at": "2024-10-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 1,
+    "fields": {
+      "title": "De Excel a plataforma operativa en 90 días",
+      "slug": "excel-a-plataforma-operativa",
+      "industry": "Seguridad privada",
+      "company_size": "100+ colaboradores operativos",
+      "problem": "Una empresa de seguridad privada manejaba asistencia, rondas, bitácoras y control vehicular en hojas de Excel y cuadernos físicos. La información se perdía, los errores eran frecuentes y procesar la planilla tomaba más de dos días al mes.",
+      "solution": "Diseñé e implementé SCT APP, una plataforma web Django con módulos de asistencia digital, rondas con QR, bitácoras electrónicas, control vehicular y generación automática de planilla. Un sistema central que reemplazó todos los controles manuales.",
+      "result": "La empresa eliminó los registros en papel, redujo el tiempo de planilla de 2 días a menos de 2 horas, y tiene visibilidad en tiempo real de más de 100 colaboradores en múltiples puestos simultáneamente.",
+      "metric_1_label": "usuarios activos en producción",
+      "metric_1_value": "100+",
+      "metric_2_label": "reducción en tiempo de planilla",
+      "metric_2_value": "95%",
+      "metric_3_label": "registros en papel eliminados",
+      "metric_3_value": "0",
+      "is_published": true,
+      "order": 1,
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "cases.casestudy",
+    "pk": 2,
+    "fields": {
+      "title": "Automatización de leads entre WordPress y Bitrix24",
+      "slug": "automatizacion-leads-wordpress-bitrix24",
+      "industry": "Ventas / CRM",
+      "company_size": "Equipo de ventas de 5 personas",
+      "problem": "El equipo de ventas recibía consultas por el sitio WordPress pero tenía que copiar manualmente los datos al CRM Bitrix24. Los leads se perdían, llegaban tarde o se duplicaban. El tiempo de respuesta era de horas.",
+      "solution": "Desarrollé una integración personalizada que captura automáticamente cada formulario del sitio WordPress y lo envía al pipeline correcto en Bitrix24 en tiempo real, con notificación inmediata al vendedor asignado.",
+      "result": "El tiempo de respuesta a prospectos bajó de horas a minutos. Se eliminó la transcripción manual. El equipo de ventas opera ahora desde Bitrix24 sin tocar WordPress.",
+      "metric_1_label": "tiempo de respuesta a leads",
+      "metric_1_value": "< 2 min",
+      "metric_2_label": "leads perdidos por transcripción",
+      "metric_2_value": "0",
+      "metric_3_label": "horas manuales eliminadas por semana",
+      "metric_3_value": "8+",
+      "is_published": true,
+      "order": 2,
+      "created_at": "2024-07-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": { "name": "Django", "slug": "django", "description": "Desarrollo con Django y Python", "order": 1 }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": { "name": "Automatización", "slug": "automatizacion", "description": "Procesos automáticos y scripts", "order": 2 }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": { "name": "Integraciones", "slug": "integraciones", "description": "APIs y conexiones entre sistemas", "order": 3 }
+  }
+]

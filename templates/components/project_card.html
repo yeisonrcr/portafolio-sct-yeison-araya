@@ -1,0 +1,37 @@
+{% load static %}
+<article class="project-card" data-slug="{{ project.slug }}">
+  <a href="{% url 'projects:detail' project.slug %}" class="project-card__link">
+    <div class="project-card__image-wrap">
+      {% if project.cover_image %}
+        <img
+          src="{{ project.cover_image.url }}"
+          alt="{{ project.title }}"
+          class="project-card__image"
+          loading="lazy"
+        />
+      {% else %}
+        <div class="project-card__image-placeholder">
+          <span>{{ project.title|slice:":2"|upper }}</span>
+        </div>
+      {% endif %}
+      <div class="project-card__overlay"></div>
+    </div>
+
+    <div class="project-card__body">
+      <h3 class="project-card__title">{{ project.title }}</h3>
+      <p class="project-card__desc">{{ project.short_description|default:project.description|truncatechars:120 }}</p>
+
+      {% if project.technologies.all %}
+        <ul class="project-card__tags">
+          {% for tech in project.technologies.all|slice:":4" %}
+            <li class="project-card__tag" style="border-color: {{ tech.color }}">
+              {{ tech.name }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <span class="project-card__cta">Ver proyecto →</span>
+    </div>
+  </a>
+</article>

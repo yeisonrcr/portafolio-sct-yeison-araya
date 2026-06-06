@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Yeison Araya — Arquitecto de Software Operativo{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero__bg-grid"></div>
+  <div class="hero__container">
+    <div class="hero__content">
+      <p class="hero__pre-title" id="heroPreTitle">Líder de TI · Desarrollo Empresarial</p>
+      <h1 class="hero__title" id="heroTitle">
+        Yeison<br/><span class="hero__title-gold">Araya</span>
+      </h1>
+      <p class="hero__subtitle" id="heroSubtitle">
+        Arquitecto de software operativo para empresas que necesitan<br class="hide-mobile"/>
+        dejar de depender de Excel.
+      </p>
+      <p class="hero__desc" id="heroDesc">
+        Creo plataformas web a medida para automatizar procesos reales:
+        asistencia, planilla, rondas, vehículos, bodegas, reportes, APIs e integraciones empresariales.
+      </p>
+      <div class="hero__actions" id="heroActions">
+        <a href="{% url 'projects:list' %}" class="btn btn--gold btn--lg">Ver proyectos</a>
+        <a href="{% url 'contact:contact' %}" class="btn btn--outline btn--lg">Contactar</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" id="heroVisual">
+      <div class="hero__code-card">
+        <div class="hero__code-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <pre class="hero__code"><code><span class="c-kw">class</span> <span class="c-fn">YeisonAraya</span>:
+    role = <span class="c-str">"Software Architect"</span>
+    years = <span class="c-num">7</span>
+    focus = <span class="c-str">"Enterprise Operations"</span>
+
+    <span class="c-kw">def</span> <span class="c-fn">solve</span>(self, problem):
+        <span class="c-kw">return</span> Platform(
+            real_data=<span class="c-kw">True</span>,
+            users_in_prod=<span class="c-kw">True</span>,
+            replaces_excel=<span class="c-kw">True</span>
+        )</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll-hint">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FRASE ══ -->
+<section class="quote-section">
+  <div class="section-container">
+    <blockquote class="quote" data-gsap="fade-up">
+      "Donde una empresa ve desorden operativo,<br/>
+      <strong>yo veo una plataforma por construir.</strong>"
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FEATURED PROJECT ══ -->
+{% if featured_project %}
+<section class="featured-project" id="sct-app">
+  <div class="section-container">
+    <div class="section-header" data-gsap="fade-up">
+      <span class="section-label">Proyecto principal</span>
+      <h2 class="section-title">{{ featured_project.title }}</h2>
+      <p class="section-subtitle">{{ featured_project.subtitle }}</p>
+    </div>
+
+    <div class="featured-project__grid">
+      <div class="featured-project__info" data-gsap="slide-right">
+        <p class="featured-project__desc">{{ featured_project.description }}</p>
+
+        {% if featured_project.users_count %}
+          <div class="featured-project__metrics">
+            <div class="metric-item">
+              <span class="metric-item__value">{{ featured_project.users_count }}+</span>
+              <span class="metric-item__label">Usuarios activos</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-item__value">{{ featured_project.duration_months }}m</span>
+              <span class="metric-item__label">En producción</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-item__value">Django</span>
+              <span class="metric-item__label">Stack principal</span>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if featured_project.technologies.all %}
+          <ul class="tech-tags">
+            {% for tech in featured_project.technologies.all %}
+              <li class="tech-tag" style="border-color: {{ tech.color }}">{{ tech.name }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <a href="{% url 'projects:detail' featured_project.slug %}" class="btn btn--gold">
+          Ver caso completo →
+        </a>
+      </div>
+
+      <div class="featured-project__image-wrap" data-gsap="slide-left">
+        {% if featured_project.cover_image %}
+          <img
+            src="{{ featured_project.cover_image.url }}"
+            alt="{{ featured_project.title }}"
+            class="featured-project__image"
+          />
+        {% else %}
+          <div class="featured-project__image-placeholder">
+            <div class="placeholder-screen">
+              <div class="placeholder-topbar"></div>
+              <div class="placeholder-sidebar"></div>
+              <div class="placeholder-content">
+                <div class="placeholder-line w-80"></div>
+                <div class="placeholder-line w-60"></div>
+                <div class="placeholder-line w-90"></div>
+                <div class="placeholder-card"></div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════ CARRUSEL ══ -->
+{% if carousel_projects %}
+<section class="carousel-section" id="projects-carousel">
+  <div class="section-container">
+    <div class="section-header" data-gsap="fade-up">
+      <span class="section-label">Portafolio</span>
+      <h2 class="section-title">Proyectos</h2>
+    </div>
+  </div>
+
+  <div class="carousel-wrapper">
+    <div class="carousel" id="projectCarousel">
+      {% for project in carousel_projects %}
+        {% include 'components/project_card.html' %}
+      {% endfor %}
+      {# Duplicar para loop infinito #}
+      {% for project in carousel_projects %}
+        {% include 'components/project_card.html' %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="carouselPrev" aria-label="Anterior">&#8592;</button>
+    <a href="{% url 'projects:list' %}" class="btn btn--outline">Ver todos</a>
+    <button class="carousel-btn" id="carouselNext" aria-label="Siguiente">&#8594;</button>
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════ CASOS ══ -->
+{% if cases %}
+<section class="cases-preview" id="cases">
+  <div class="section-container">
+    <div class="section-header" data-gsap="fade-up">
+      <span class="section-label">Resultados reales</span>
+      <h2 class="section-title">Casos de éxito</h2>
+    </div>
+
+    <div class="cases-grid">
+      {% for case in cases %}
+        <article class="case-card" data-gsap="fade-up">
+          <div class="case-card__industry">{{ case.industry }}</div>
+          <h3 class="case-card__title">{{ case.title }}</h3>
+          <p class="case-card__problem"><strong>Problema:</strong> {{ case.problem|truncatechars:120 }}</p>
+          <p class="case-card__result"><strong>Resultado:</strong> {{ case.result|truncatechars:120 }}</p>
+          {% if case.metric_1_value %}
+            <div class="case-card__metrics">
+              <span class="case-metric">
+                <strong>{{ case.metric_1_value }}</strong> {{ case.metric_1_label }}
+              </span>
+            </div>
+          {% endif %}
+          <a href="{% url 'cases:detail' case.slug %}" class="case-card__link">Ver caso →</a>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-cta" data-gsap="fade-up">
+      <a href="{% url 'cases:list' %}" class="btn btn--outline">Ver todos los casos</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════ PROCESO ══ -->
+<section class="process-section" id="process">
+  <div class="section-container">
+    <div class="section-header" data-gsap="fade-up">
+      <span class="section-label">Metodología</span>
+      <h2 class="section-title">Cómo trabajo</h2>
+    </div>
+
+    <ol class="process-steps">
+      {% for step in "12345678" %}
+        {% if forloop.counter == 1 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">01</span>
+            <div>
+              <h3>Observo el problema real</h3>
+              <p>Entiendo la operación antes de escribir una línea de código.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 2 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">02</span>
+            <div>
+              <h3>Entiendo la operación</h3>
+              <p>Mapeo flujos, datos, usuarios y puntos de falla actuales.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 3 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">03</span>
+            <div>
+              <h3>Diseño la solución práctica</h3>
+              <p>Arquitectura simple, escalable y enfocada en el negocio.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 4 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">04</span>
+            <div>
+              <h3>Programo la plataforma</h3>
+              <p>Django, REST Framework, autenticación, permisos y datos reales.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 5 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">05</span>
+            <div>
+              <h3>Integro datos y procesos</h3>
+              <p>APIs, QR, mapas, webhooks, notificaciones y reportes.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 6 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">06</span>
+            <div>
+              <h3>Pruebo con usuarios reales</h3>
+              <p>El sistema no sale al aire hasta que la operación lo valida.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 7 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">07</span>
+            <div>
+              <h3>Pongo en producción</h3>
+              <p>Railway, VPS o el servidor del cliente. Siempre con respaldo.</p>
+            </div>
+          </li>
+        {% elif forloop.counter == 8 %}
+          <li class="process-step" data-gsap="fade-up">
+            <span class="process-step__num">08</span>
+            <div>
+              <h3>Mejoro según la operación</h3>
+              <p>Los sistemas que construyo crecen con la empresa.</p>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ BLOG ══ -->
+{% if latest_posts %}
+<section class="blog-preview" id="blog">
+  <div class="section-container">
+    <div class="section-header" data-gsap="fade-up">
+      <span class="section-label">Conocimiento</span>
+      <h2 class="section-title">Blog técnico</h2>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in latest_posts %}
+        <article class="blog-card" data-gsap="fade-up">
+          {% if post.cover_image %}
+            <img src="{{ post.cover_image.url }}" alt="{{ post.title }}" class="blog-card__image" loading="lazy"/>
+          {% endif %}
+          <div class="blog-card__body">
+            {% if post.category %}
+              <span class="blog-card__cat">{{ post.category.name }}</span>
+            {% endif %}
+            <h3 class="blog-card__title">
+              <a href="{% url 'blog:detail' post.slug %}">{{ post.title }}</a>
+            </h3>
+            <p class="blog-card__excerpt">{{ post.excerpt|truncatechars:150 }}</p>
+            <div class="blog-card__meta">
+              <span>{{ post.reading_time }} min de lectura</span>
+              {% if post.published_at %}
+                <span>{{ post.published_at|date:"d M Y" }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-cta" data-gsap="fade-up">
+      <a href="{% url 'blog:list' %}" class="btn btn--outline">Ver todos los posts</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════ CTA FINAL ══ -->
+<section class="cta-section">
+  <div class="section-container">
+    <div class="cta-box" data-gsap="fade-up">
+      <h2 class="cta-box__title">
+        ¿Tu empresa todavía depende de Excel<br/>
+        para controlar operaciones críticas?
+      </h2>
+      <p class="cta-box__desc">
+        Hablemos. Te muestro cómo una plataforma web a medida puede
+        cambiar la forma en que tu equipo trabaja.
+      </p>
+      <a href="{% url 'contact:contact' %}" class="btn btn--gold btn--lg">
+        Iniciar conversación →
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/project_carousel.js' %}" defer></script>
+{% endblock %}

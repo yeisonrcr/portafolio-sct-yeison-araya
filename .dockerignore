@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.pyc
+.env
+.env.*
+!.env.example
+db.sqlite3
+staticfiles/
+media/
+.git/
+.gitignore
+*.md
+!requirements.txt
+node_modules/

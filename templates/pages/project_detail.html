@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ project.title }} — Yeison Araya{% endblock %}
+{% block meta_description %}{{ project.short_description|default:project.description|truncatechars:160 }}{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+  <div class="section-container">
+    <div class="project-detail__header" data-gsap="fade-up">
+      <a href="{% url 'projects:list' %}" class="back-link">← Proyectos</a>
+      {% if project.is_featured %}
+        <span class="badge badge--gold">Proyecto principal</span>
+      {% endif %}
+      <h1 class="project-detail__title">{{ project.title }}</h1>
+      {% if project.subtitle %}
+        <p class="project-detail__subtitle">{{ project.subtitle }}</p>
+      {% endif %}
+
+      {% if project.technologies.all %}
+        <ul class="tech-tags">
+          {% for tech in project.technologies.all %}
+            <li class="tech-tag" style="border-color: {{ tech.color }}">{{ tech.name }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="project-detail__grid">
+      <div class="project-detail__content" data-gsap="slide-right">
+        {% if project.cover_image %}
+          <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="project-detail__cover" />
+        {% endif %}
+        <div class="project-detail__desc">{{ project.description|linebreaks }}</div>
+
+        {% if project.images.all %}
+          <div class="project-gallery">
+            {% for img in project.images.all %}
+              <figure class="project-gallery__item">
+                <img src="{{ img.image.url }}" alt="{{ img.caption }}" loading="lazy"/>
+                {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <aside class="project-detail__sidebar" data-gsap="slide-left">
+        {% if project.users_count %}
+          <div class="sidebar-stat">
+            <span class="sidebar-stat__value">{{ project.users_count }}+</span>
+            <span class="sidebar-stat__label">Usuarios activos</span>
+          </div>
+        {% endif %}
+        {% if project.duration_months %}
+          <div class="sidebar-stat">
+            <span class="sidebar-stat__value">{{ project.duration_months }} m</span>
+            <span class="sidebar-stat__label">En producción</span>
+          </div>
+        {% endif %}
+        <div class="sidebar-stat">
+          <span class="sidebar-stat__value">{{ project.get_status_display }}</span>
+          <span class="sidebar-stat__label">Estado</span>
+        </div>
+
+        {% if project.url_live %}
+          <a href="{{ project.url_live }}" target="_blank" rel="noopener" class="btn btn--gold btn--block">
+            Ver en producción ↗
+          </a>
+        {% endif %}
+
+        <a href="{% url 'contact:contact' %}" class="btn btn--outline btn--block">
+          Proyecto similar →
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% if related_projects %}
+<section class="section-container related-projects">
+  <h2 class="section-title" data-gsap="fade-up">Otros proyectos</h2>
+  <div class="projects-grid">
+    {% for p in related_projects %}
+      {% include 'components/project_card.html' with project=p %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — Mobile first breakpoints
+   lg: ≥1024  md: ≥768  sm: <768  xs: <480
+═══════════════════════════════════════════════════════════ */
+
+/* ─── lg: tablet landscape / small desktop ───────────── */
+@media (max-width: 1024px) {
+  .hero__container        { grid-template-columns: 1fr; gap: var(--space-10); }
+  .hero__visual           { display: none; }
+  .hero__title            { font-size: clamp(3rem, 8vw, 5rem); }
+
+  .featured-project__grid { grid-template-columns: 1fr; }
+  .footer__top            { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+
+  .project-detail__grid   { grid-template-columns: 1fr; }
+  .project-detail__sidebar { position: static; }
+  .project-detail__header { padding-top: calc(var(--space-20) + 80px); }
+
+  .case-full__grid        { grid-template-columns: 1fr; }
+  .dashboard__stats       { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── md: tablet portrait ────────────────────────────── */
+@media (max-width: 768px) {
+  :root { font-size: 15px; }
+
+  .navbar__toggle { display: flex; }
+
+  .navbar__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(320px, 85vw);
+    height: 100vh;
+    background: var(--black-soft);
+    border-left: 1px solid var(--black-border);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-12);
+    transition: right var(--transition-normal);
+  }
+
+  .navbar__nav.open { right: 0; }
+
+  .navbar__list {
+    flex-direction: column;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+
+  .navbar__link {
+    font-size: var(--text-lg);
+    color: var(--white);
+  }
+
+  .hero__actions      { flex-direction: column; align-items: flex-start; }
+  .hero__title        { font-size: clamp(2.8rem, 12vw, 5rem); }
+
+  .process-steps      { grid-template-columns: 1fr; }
+  .contact-grid       { grid-template-columns: 1fr; }
+  .about-grid         { grid-template-columns: 1fr; }
+  .about-skills       { position: static; }
+
+  .featured-project__metrics { flex-wrap: wrap; gap: var(--space-5); }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__bottom     { flex-direction: column; gap: var(--space-3); text-align: center; }
+
+  .cta-box            { padding: var(--space-10) var(--space-6); }
+
+  .projects-grid      { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .blog-grid          { grid-template-columns: 1fr; }
+  .cases-grid         { grid-template-columns: 1fr; }
+
+  .dashboard__stats   { grid-template-columns: repeat(2, 1fr); }
+  .project-gallery    { grid-template-columns: 1fr; }
+}
+
+/* ─── sm: mobile ─────────────────────────────────────── */
+@media (max-width: 580px) {
+  .hide-mobile { display: none; }
+
+  .hero__pre-title    { font-size: 0.65rem; }
+  .hero__title        { font-size: clamp(2.4rem, 14vw, 4rem); }
+  .hero__subtitle     { font-size: var(--text-base); }
+
+  .section-container  { padding: 0 var(--space-4); }
+  .section-header     { margin-bottom: var(--space-8); }
+
+  .carousel           { padding: var(--space-4); }
+  .project-card       { width: 280px; }
+
+  .dashboard__stats   { grid-template-columns: 1fr 1fr; }
+  .dashboard__title   { font-size: var(--text-2xl); }
+
+  .cta-box__title     { font-size: var(--text-2xl); }
+  .cta-box__desc      { font-size: var(--text-base); }
+
+  .case-full          { padding: var(--space-5); }
+  .contact-form-wrap  { padding: var(--space-5); }
+
+  .btn--lg { padding: var(--space-3) var(--space-6); font-size: var(--text-sm); }
+}
+
+/* ─── xs: very small ─────────────────────────────────── */
+@media (max-width: 380px) {
+  .hero__title    { font-size: 2.2rem; }
+  .hero__actions  { gap: var(--space-3); }
+  .btn--lg        { width: 100%; }
+}
+
+/* ─── Navbar overlay (mobile) ───────────────────────── */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: calc(var(--z-navbar) - 1);
+  backdrop-filter: blur(4px);
+}
+
+.nav-overlay.active { display: block; }
